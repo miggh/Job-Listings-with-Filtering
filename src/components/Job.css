@@ -1,0 +1,154 @@
+.job {
+  background-color: #fff;
+  width: 75%;
+  min-width: 120rem;
+  margin: 2rem auto;
+  padding: 2rem 4rem;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 4fr 5fr;
+  column-gap: 2rem;
+  align-items: center;
+  box-shadow: 0 2.4rem 2.4rem rgba(91, 164, 164, 0.3);
+}
+
+.feature {
+  border-left: 5px solid #5ba4a4;
+}
+
+.job-detail--first-row,
+.job-detail--last-row,
+.job-tags {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.job-detail--first-row {
+  margin-bottom: 2rem;
+}
+
+.company-name {
+  color: #5ba4a4;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.new,
+.featured {
+  padding: 0.6rem 1rem 0.25rem 1rem;
+  letter-spacing: 1px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.new {
+  background-color: #5ba4a4;
+}
+
+.featured {
+  background-color: #000;
+}
+
+.job-name {
+  font-size: 2.4rem;
+  color: #2c3a3a;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.job-name:hover {
+  color: #5ba4a4;
+}
+
+.job-detail--last-row {
+  margin-top: 2rem;
+  color: #7b8e8e;
+  font-size: 1.4rem;
+}
+
+.update-time,
+.offer {
+  position: relative;
+}
+
+.update-time::after,
+.offer::after {
+  content: ".";
+  position: absolute;
+  top: -0.5rem;
+  right: -1.2rem;
+}
+
+.job-tags {
+  justify-self: flex-end;
+}
+
+.filter-btn {
+  font-family: "Spartan", sans-serif;
+  background-color: #eef6f6;
+  border-style: none;
+  border-radius: 5px;
+  padding: 1rem;
+  color: #5ba4a4;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn:active {
+  background-color: #5ba4a4;
+  color: #eef6f6;
+}
+
+@media (max-width: 75em) {
+  .job {
+    min-width: 90rem;
+  }
+
+  .job {
+    grid-template-columns: 1fr 4fr 3fr;
+  }
+
+  .job-tags {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 54.7em) {
+  .job {
+    min-width: 35rem;
+  }
+
+  .job {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 1fr;
+    row-gap: 2rem;
+    position: relative;
+    margin-bottom: 8rem;
+    padding: 2rem;
+  }
+
+  .job-img {
+    position: absolute;
+    top: -4rem;
+    left: 1rem;
+  }
+
+  .job-detail--first-row {
+    margin-top: 4rem;
+  }
+
+  .job-tags {
+    justify-self: flex-start;
+    justify-content: flex-start;
+    padding-top: 2rem;
+    border-top: 1px solid #7b8e8e;
+  }
+}
